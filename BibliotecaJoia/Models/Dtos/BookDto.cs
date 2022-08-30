@@ -1,11 +1,17 @@
-﻿namespace BibliotecaJoia.Models.Dtos
+﻿using BibliotecaJoia.Models.Entities;
+
+namespace BibliotecaJoia.Models.Dtos
 {
-    public class BookDto
+    public class BookDto : BaseEntity
     {
-        public string Id { get; set; }
         public string Name { get; set; }
         public string Author { get; set; }
         public string Publisher { get; set; }
+
+        public BookDto()
+        {
+
+        }
 
         public BookDto(string id, string name, string author, string publisher) 
             : this(name, author, publisher)

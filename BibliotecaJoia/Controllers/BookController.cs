@@ -28,5 +28,10 @@ namespace BibliotecaJoia.Controllers
                 throw e;
             }
         }
+
+        public IActionResult Create()
+        {
+            return View();
+        }
     }
 }
