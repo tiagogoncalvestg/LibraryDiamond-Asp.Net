@@ -1,0 +1,53 @@
+﻿@model IEnumerable<BibliotecaJoia.Models.Dtos.BookDto>
+
+@{
+    ViewData["Title"] = "List";
+}
+
+<h1>List</h1>
+
+<p>
+    <a asp-action="Create">Create new</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Author)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Publisher)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Author)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Publisher)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "teste", new{})
+                    @Html.ActionLink("Detailes", "teste", new{})
+                    @Html.ActionLink("Delete", "teste", new{})
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
