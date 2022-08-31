@@ -4,10 +4,10 @@
     ViewData["Title"] = "List";
 }
 
-<h1>List</h1>
+<h1>Cadastro de Livros</h1>
 
 <p>
-    <a asp-action="Create">Create new</a>
+    <a asp-action="Create">Adicionar Livro</a>
 </p>
 <table class="table">
     <thead>
@@ -43,7 +43,7 @@
                     @Html.DisplayFor(modelItem => item.Publisher)
                 </td>
                 <td>
-                    @Html.ActionLink("Edit", "teste", new{})
+                    @Html.ActionLink("Atualizar", "Edit", new{ id=item.Id })
                     @Html.ActionLink("Detailes", "teste", new{})
                     @Html.ActionLink("Delete", "teste", new{})
                 </td>

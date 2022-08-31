@@ -19,19 +19,45 @@ namespace BibliotecaJoia.Models.Services
             {
                 _bookRepository.Create(book);
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 throw e;
             }
 
         }
 
+        public BookDto ReadById(string id)
+        {
+            try
+            {
+                var result = _bookRepository.ReadById(id);
+                return result;
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
+
         public List<BookDto> ToListBooks()
         {
             try
             {
-            return _bookRepository.ToListBooks();
-            }catch(Exception e)
+                return _bookRepository.ToListBooks();
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
+
+        public void Update(BookDto book)
+        {
+            try
+            {
+                _bookRepository.Update(book);
+            }
+            catch (Exception e)
             {
                 throw e;
             }

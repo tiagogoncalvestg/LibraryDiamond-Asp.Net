@@ -6,5 +6,7 @@ namespace BibliotecaJoia.Models.Contracts.Repositories
     {
         void Create(BookDto bookDto);
         List<BookDto> ToListBooks();
+        BookDto ReadById(string id);
+        void Update(BookDto book);
     }
 }
